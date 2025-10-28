@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ek baar aur</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    body {
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Oswald, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .gif-container img {
+      width: 200px;
+      height: auto;
+    }
+
+    .text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 25px;
+      color: #333;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 30px;
+      border-radius: 10px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+       .yes-btn {
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      box-shadow: 0 4px 10px rgba(0, 114, 255, 0.4);
+    }
+    
+    .yes-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
+    }
+    
+    .no-btn {
+      background: linear-gradient(45deg, #ff4b2b, #ff416c);
+      box-shadow: 0 4px 10px rgba(255, 65, 108, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gif-container">
+    <!-- Apna GIF yahan daalo -->
+    <img src="f312bfda-52d2-4a2c-ac4a-3d9d756603db.gif" alt="Centered GIF">
+  </div>
+
+  <div class="text">
+    <p>   Ek baar aur soch lo !! 😭    </p>
+    <p>Kyu aaisa kr rhe ho</p>
+  </div>
+
+  <div class="buttons">
+    <a href="yes1.html" class="yes-btn">Yes</a>
+    <a href="no3.html" class="no-btn">No</a>
+  </div>
+  <script>
+  const gif = document.querySelector('.gif-container img');
+  setInterval(() => {
+    gif.src = gif.src.split('?')[0] + '?' + new Date().getTime();
+  }, 6000); // har 3 sec me reload karega
+</script>
+
+</body>
+</html>

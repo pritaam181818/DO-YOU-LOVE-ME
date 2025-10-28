@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I knew it.</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    body {
+      background: linear-gradient(135deg, white, white);
+      font-family: 'Oswald', sans-serif;
+      text-align: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .gif-container img {
+      width: 200px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.4);
+      margin-bottom: 25px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color:black;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      color:black;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .call-btn {
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+    }
+
+    .whatsapp-btn {
+      background: linear-gradient(45deg, #25D366, #128C7E);
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gif-container">
+    <img src="mochi-cat.gif" alt="Happy GIF">
+  </div>
+
+  <h1>Hehehehe!!!</h1>
+  <p>I knew it ! love You a lot 💖</p>
+<script>
+  const gif = document.querySelector('.gif-container img');
+  setInterval(() => {
+    gif.src = gif.src.split('?')[0] + '?' + new Date().getTime();
+  }, 3000); // har 3 sec me reload karega
+</script>
+  
+</body>
+</html>
